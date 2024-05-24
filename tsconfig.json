@@ -6,11 +6,12 @@
     "strict": true,
     "skipLibCheck": true,
     "lib": [
-      "ESNext"
+      "ESNext",
+      "DOM"
     ],
     "types": [
-      "@cloudflare/workers-types",
-      "vite/client"
+      "vite/client",
+      "@cloudflare/workers-types"
     ],
     "jsx": "react-jsx",
     "jsxImportSource": "hono/jsx"

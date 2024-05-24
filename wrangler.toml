@@ -1,12 +1,14 @@
-name = "hono-todo"
+name = "honox-todo"
+compatibility_date = "2024-04-01"
+compatibility_flags = [ "nodejs_compat" ]
 pages_build_output_dir = "./dist"
 
-[vars]
-MY_NAME = "Hono"
+# [vars]
+# MY_VAR = "my-variable"
 
-[[kv_namespaces]]
-binding = "MY_KV"
-id = "ff1fbe58185f49e2b34ea990f3c33055"
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 # [[r2_buckets]]
 # binding = "MY_BUCKET"
