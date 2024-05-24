@@ -10,10 +10,8 @@ const app = new Hono<{ Bindings: Bindings }>();
 
 app.get("*", renderer);
 
-app.get("/", async (c) => {
-  await c.env.MY_KV.put("name", c.env.MY_NAME);
-  const name = await c.env.MY_KV.get("name");
-  return c.render(<h1>Hello, {name}</h1>);
+app.get("/", (c) => {
+  return c.render(<h1>Hello, Cloudflare Pages!</h1>);
 });
 
 export default app;
