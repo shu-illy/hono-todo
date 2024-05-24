@@ -1,7 +1,12 @@
 import { Hono } from "hono";
 import { renderer } from "./renderer";
 
-const app = new Hono();
+type Bindings = {
+  MY_NAME: string;
+  MY_KV: KVNamespace;
+};
+
+const app = new Hono<{ Bindings: Bindings }>();
 
 app.get("*", renderer);
 

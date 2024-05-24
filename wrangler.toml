@@ -1,12 +1,12 @@
 name = "hono-todo"
 pages_build_output_dir = "./dist"
 
-# [vars]
-# MY_VAR = "my-variable"
+[vars]
+MY_NAME = "Hono"
 
-# [[kv_namespaces]]
-# binding = "MY_KV_NAMESPACE"
-# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+[[kv_namespaces]]
+binding = "MY_KV"
+id = "ff1fbe58185f49e2b34ea990f3c33055"
 
 # [[r2_buckets]]
 # binding = "MY_BUCKET"
