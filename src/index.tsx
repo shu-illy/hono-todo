@@ -1,5 +1,7 @@
 import { Hono } from "hono";
 import { renderer } from "./renderer";
+import { List } from "./pages/List";
+import { Detail } from "./pages/Detail";
 
 type Bindings = {
   MY_NAME: string;
@@ -8,10 +10,15 @@ type Bindings = {
 
 const app = new Hono<{ Bindings: Bindings }>();
 
-app.get("*", renderer);
+app.use(renderer);
 
 app.get("/", (c) => {
-  return c.render(<h1>Hello, Cloudflare Pages!</h1>);
+  return c.render(<List />);
+});
+
+app.get("/todo/:id", (c) => {
+  const { id } = c.req.param();
+  return c.render(<Detail id={id} />);
 });
 
 export default app;
