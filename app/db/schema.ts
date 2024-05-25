@@ -8,9 +8,9 @@ export const todos = sqliteTable("todos", {
   done: integer("done", { mode: "boolean" }).notNull(),
   createdAt: integer("created_at", { mode: "timestamp" })
     .notNull()
-    .default(sql`(unixepoch())`),
+    .default(sql`(CURRENT_TIMESTAMP)`),
   updatedAt: integer("updated_at", { mode: "timestamp" })
     .notNull()
-    .default(sql`(unixepoch())`)
-    .$onUpdate(() => sql`(unixepoch())`),
+    .default(sql`(CURRENT_TIMESTAMP)`)
+    .$onUpdate(() => new Date()),
 });
