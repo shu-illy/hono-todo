@@ -1,27 +1,14 @@
 import { FC } from "hono/jsx";
-import { Todo } from "../../types/todo";
+import { todos } from "../../db/schema";
+import { InferSelectModel } from "drizzle-orm";
 
 type Props = {
-  todos: Todo[];
-  setTodos: (todos: Todo[]) => void;
+  todos: InferSelectModel<typeof todos>[];
 };
 
-const TodoList: FC<Props> = ({ todos, setTodos }) => {
-  const handleDelete = (id: string) => {
-    const newTodos = todos.filter((item) => item.id !== id);
-    console.log(newTodos);
-    setTodos(newTodos);
-  };
-  const handleDone = (id: string) => {
-    const newTodos = todos.map((item) => {
-      if (item.id === id) {
-        return { ...item, done: true };
-      }
-      return item;
-    });
-    console.log(newTodos);
-    setTodos(newTodos);
-  };
+const TodoList: FC<Props> = ({ todos }) => {
+  const handleDelete = (id: number) => {};
+  const handleDone = (id: number) => {};
 
   return (
     <div class="space-y-4">

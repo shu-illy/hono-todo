@@ -4,5 +4,5 @@ import ListArea from "../islands/todos/ListArea";
 export default createRoute((c) => {
   const name = c.req.query("name") ?? "Hono";
 
-  return c.render(<ListArea />);
+  return c.render(<div>トップページ</div>);
 });
