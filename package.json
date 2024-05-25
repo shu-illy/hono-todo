@@ -9,7 +9,9 @@
   },
   "private": true,
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.13",
     "autoprefixer": "^10.4.19",
+    "daisyui": "latest",
     "hono": "^4.3.11",
     "honox": "^0.1.17",
     "postcss": "^8.4.38",
