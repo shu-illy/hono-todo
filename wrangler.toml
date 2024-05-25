@@ -14,10 +14,10 @@ pages_build_output_dir = "./dist"
 # binding = "MY_BUCKET"
 # bucket_name = "my-bucket"
 
-# [[d1_databases]]
-# binding = "DB"
-# database_name = "my-database"
-# database_id = ""
+[[d1_databases]]
+binding = "DB" # i.e. available in your Worker on env.DB
+database_name = "honox-todo"
+database_id = "b68ff809-4ea1-4409-8dcf-a65c1a94ca4a"
 
 # [ai]
 # binding = "AI"
