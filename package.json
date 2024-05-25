@@ -7,6 +7,8 @@
     "preview": "wrangler pages dev",
     "deploy": "$npm_execpath run build && wrangler pages deploy",
     "generate": "drizzle-kit generate",
+    "migrate:local": "wrangler d1 migrations apply honox-todo --local --config wrangler.toml",
+    "migrate:prd": "wrangler d1 migrations apply honox-todo --remote --config wrangler.toml"
   },
   "private": true,
   "dependencies": {
