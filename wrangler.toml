@@ -18,6 +18,7 @@ pages_build_output_dir = "./dist"
 binding = "DB" # i.e. available in your Worker on env.DB
 database_name = "honox-todo"
 database_id = "b68ff809-4ea1-4409-8dcf-a65c1a94ca4a"
+migrations_dir = "app/db/migrations"
 
 # [ai]
 # binding = "AI"
