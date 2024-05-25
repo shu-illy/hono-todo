@@ -34,7 +34,19 @@ const ListArea: FC<Props> = ({ todos }) => {
         </div>
       </div>
 
-      <TodoList todos={todos} />
+      <div className="card bg-blue-200 mb-5">
+        <div className="card-body">
+          <h2 className="card-title">未完了</h2>
+          <TodoList todos={todos.filter((todo) => !todo.done)} />
+        </div>
+      </div>
+
+      <div className="card bg-green-200">
+        <div className="card-body">
+          <h2 className="card-title">完了済</h2>
+          <TodoList todos={todos.filter((todo) => todo.done)} />
+        </div>
+      </div>
     </div>
   );
 };

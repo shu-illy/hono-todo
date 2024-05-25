@@ -7,7 +7,7 @@ export const POST = createRoute(async (c) => {
   const db = drizzle(c.env.DB);
 
   const body = await c.req.formData();
-  const result = await db
+  await db
     .insert(todos)
     .values({
       title: body.get("title")?.toString() ?? "",
