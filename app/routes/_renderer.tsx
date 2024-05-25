@@ -15,7 +15,7 @@ export default jsxRenderer(({ children, title }) => {
         <Script src="/app/client.ts" async />
         <Style />
       </head>
-      <body>{children}</body>
+      <body className="h-screen bg-gray-100 p-10">{children}</body>
     </html>
   );
 });
