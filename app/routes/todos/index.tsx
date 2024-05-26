@@ -23,7 +23,6 @@ export default createRoute(async (c) => {
   const db = drizzle(c.env.DB);
 
   const result = await db.select().from(todos);
-  console.log(result);
 
   return c.render(<ListArea todos={result} />);
 });

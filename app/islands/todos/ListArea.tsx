@@ -8,7 +8,6 @@ type Props = {
 };
 
 const ListArea: FC<Props> = ({ todos }) => {
-  console.log(todos.filter((todo) => todo.done));
   return (
     <div class="container mx-auto max-w-xl">
       <div class="card bg-base-100 shadow-xl mb-5">

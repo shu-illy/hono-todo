@@ -5,7 +5,6 @@ import { eq } from "drizzle-orm";
 
 export default createRoute((c) => {
   const id = c.req.param().id;
-  console.log(id);
 
   return c.render(<div>id: {id}</div>);
 });
@@ -23,7 +22,6 @@ export const PUT = createRoute(async (c) => {
   const db = drizzle(c.env.DB);
   const id = c.req.param().id;
 
-  console.log(`id: ${id}`);
   await db
     .update(todos)
     .set({ done: true })
